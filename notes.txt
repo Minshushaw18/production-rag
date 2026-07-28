@@ -1,0 +1,23 @@
+1. We are using logfire to trace the application.
+2. we are using langsmith to trace the llm.
+3. For the purpose of reranking we are using flashrank.(locally)
+   Jina embedding, reranking                           (production)
+4. Nemo guardrails
+5. Portkey gateways
+
+
+OBSERVABILITY: (From app pov: logfire)
+Span: 1 unit of execution.
+Trace: collection of span (there can be traces inside trace)
+Waterfall: How much time was taken by one particular Span
+
+GUARDRAILS: This should be present in both input and output.
+   INPUT: It's going to identify the intention of the user query.(off topic or on topic)
+      > Refuse off topic and also refuse jail break, sensitve question.
+CUSTOMRAILS: When we want to identify some pattern.
+
+LLM GATEWAYS:
+   Model routing 
+   fallback
+   Virtual key
+   ** OpenAi compatible url

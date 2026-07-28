@@ -115,7 +115,8 @@ def chunk_text(
                 current_parts = [value]
                 current_length = len(value)
 
-        def split_by_char_window(value: str) -> List"""
+        def split_by_char_window(value: str) -> List[str]:
+            """
             Last-resort splitter.
             Used when a single word or long sequence exceeds chunk_size.
             """
@@ -135,7 +136,8 @@ def chunk_text(
 
             return pieces
 
-        def split_long_sentence(sentence: str) -> List"""
+        def split_long_sentence(sentence: str) -> List[str]:
+            """
             Splits a sentence that is bigger than chunk_size.
             Tries word-based splitting first, then character window fallback.
             """
@@ -190,7 +192,8 @@ def chunk_text(
 
             return [r for r in result if r.strip()]
 
-        def split_long_paragraph(paragraph: str) -> List"""
+        def split_long_paragraph(paragraph: str) -> List[str]:
+            """
             Splits oversized paragraph into sentence-sized chunks first.
             Falls back to word/char splitting only when required.
             """

@@ -21,3 +21,22 @@ LLM GATEWAYS:
    fallback
    Virtual key
    ** OpenAi compatible url
+
+
+EVALUATION:
+   AI APPLICATION EVALUATION:
+      1> Compare student answer with the correct answer
+      2>Apply scorig rules
+      3> Giva marks for each answer
+      4> Calculate total score
+      5> Give feedback
+
+      Answer relevancy
+      Faithfulness
+      context relevancy
+      context precision
+      context recall
+   
+   Categorise the golden data set:
+      > Unit evaluation (small changes)
+      > Comprehensive evaluation (major release)
